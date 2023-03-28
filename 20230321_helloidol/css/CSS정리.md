@@ -18,11 +18,11 @@ selector {
  id         유일한 id에 적용
  class      같은 class에 적용
 
- selector1 > selector2      selector1의 자식 selector2에 적용
- selector1 selector2        selector1의 자손 selector2에 적용
- selector1, selector2       selector1과 selector2를 같이 적용
- selector1 + selector2      selector1의 형제인 모든 selector2에 적용
- selector1 ~ selector2      selector1의 바로 뒤에 위치하는 형제 selector2에 적용
+ selector1 > selector2      selector1의 자식 selector2를 선택
+ selector1 selector2        selector1의 자손 selector2를 적용
+ selector1, selector2       selector1과 selector2를 같이 선택
+ selector1 ~ selector2      selector1의 형제인 모든 selector2를 선택
+ selector1 + selector2      selector1의 바로 뒤에 위치하는 형제 selector2를 선택
 
  selector:first-child()
  selector:nth-childe(n)
