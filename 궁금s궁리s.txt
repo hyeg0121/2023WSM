@@ -99,3 +99,14 @@ stretch: 요소들을 컨테이너에 맞도록 늘림
 2023-05-19 (금)
 (1) 아이콘들은 svg 로 사용한다 (벡터 이미지를 사용하여 깨지지 않게)
 (2) 하나의 요소를 클릭하고 alt를 누른 뒤 간격을 알고 싶은 요소에 마우스를 올려 놓으면 간격을 알 수 있다
+
+2023-06-01
+(1) Feather Icons
+- script src 를 head에 복사, i 태그로 아이콘 가져오기, 마지막에 feather.replace() 꼭 써주기
+(2) Bootstrap Icons
+- link 를 head에 복사, i 태그로 아이콘 가져오기
+(3) rem 
+- 1rem = 16px = 대문자 M의 너비
+- pixel = 화소
+(4) media query
+- @media screen and (max-width: 540px): max-width 가 540보다 작으면 적용
