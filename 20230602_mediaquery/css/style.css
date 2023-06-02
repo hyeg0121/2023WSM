@@ -1,0 +1,19 @@
+/* desktop */
+body {
+    background-color: darkseagreen;
+}
+/* tablet */
+/* 최대 720일 때 밑 스타일  */
+@media screen and (max-width: 720px){
+    body{
+        background-color: magenta;
+    }
+}
+/* = 아니고 :  */
+/* and() 면 적용 X, and () */
+@media screen and (max-width: 540px){
+    body{
+        background-color: rgb(134, 231, 239);
+    }
+}
+/* mobile */
