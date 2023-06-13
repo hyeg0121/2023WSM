@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+/* import문은 맨 위에 있어야 함 */
 
 /* Variable CSS */
 :root {
     /* color */
     --first-color: #008156;
-    --second-color: #efb11c;
+    --second-color: rgb(239, 177, 28);
     --body-color: black;
 
     /* font */
@@ -39,12 +40,79 @@ nav {
 }
 
 .nav.container {
-    display: flex;
+    display: flex;  /* 기본값: 수평 정렬 */
     justify-content: space-between;
     align-items: center;
+    color: #FFF; /* css 속성은 상속된다 */
+    /* padding-left: 16px;
+    padding-right: 16px; */
+    padding: 0 16px; /* top, bottom => 0, left, right => 16px*/
+}
+
+.nav.container a {
+    color: #FFF; /* reset에서 모든 a를 black으로 함 -> .nav.container의 자손인 a만 #FFF*/
 }
 
 .nav-list {
-    display: flex;
+    display: flex; /* 기본값: 수평 정렬 */
+    column-gap: 80px;   /* item의 열 사이 공간 */
+    /* gap : 열과 행 사이 공간 모두 */
+    font-weight: var(--font-bold);
+}
+
+.nav-toggle {
+    font-size: var(--h2-font-size); /* 햄버거 메뉴의 크기 키우기 (시험문제) */ 
+    visibility: hidden; /* 햄버거 메뉴가 안보이게 */
+}
+
+@media screen and (max-width: 720px) {
+    
+}
+
+
+/* mobile */
+@media screen and (max-width: 540px) {
+    /* .nav-logo 가운데 */
+    .nav-logo {
+        margin: 0 auto; /* 수평 가운데 */
+    }
+    
+    /* .nav-list navbar 아래로 */
+    .nav-list{
+        position: absolute; /*절대값 (부모가 relative면 부모의 절대값)*/
+        top: 44px;  /* navbar 보다 아래로 */
+        flex-direction: column; /* 수직으로 */
+        right: 0;   /* list의 공간을 길게 차지,  */
+        left: 0;    /* 너비를 양 옆으로 늘리기 */
+        align-items: center;    /* 교차축 가운데 */
+        background-color: rgba(239, 177, 28, 0.4);  /* 배경색 주기 */
+        backdrop-filter: blur(8px); /* blur 효과 */
+        height: 0;  /*  nav-list가 보이지 않게 */
+        overflow: hidden;   /* nav-list 안의 요소들이 보여지지 않게 */
+    }
+    
+    .nav-item{
+        padding: 1em 0; /* 세로 여백 */
+        border-bottom: 2px solid #FFF;
+    }
+
+    .nav-list a {
+        display: block;
+        color: var(--body-color);
+    }
+
+    .nav-link {
+        display: block;
+    }
+
+    /* .nav-toggle 보이게 */
+    .nav-toggle {
+        visibility: visible;
+        /* 절대값으로 만들어서 로고가 차지하는 영역에 영향 X */
+        position: absolute; /* 로고가 정가운데 위치하게끔 */
+        right: 16px;    /* 오른쪽으로 */
+    }
+    /* .show-menu 하면, .nav-list 보이게 */
+    /* .show-menu 하면, .nav-toggle 아래로 */
 }
 
