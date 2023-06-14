@@ -39,6 +39,7 @@ img {
 # webfont
 1. 웹폰트는 웹사이트를 열었을 때 다운로드 하는 것이기 때문에 쓰지 않는 것은 import 하지 않는게 좋다
 2. @import 
+3. import는 css코드 맨 위에 있어야 한다.
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 body {
@@ -49,3 +50,10 @@ body {
 # CSS 변수
 1. 변수: ```--변수명: 값;```
 3. 적용: ```var(변수명)```
+
+# padding 
+1. ```padding : [1] [2] [3] [4];``` : 1~4 순서대로 top, right, bottom, left
+2. ```padding : [1] [2];``` : 1은 top, bottom, 2는 left, right
+
+# position
+1. ```position:  absolute;```: 절대값으로 위치 (부모가 relative면 부모의 절대값)
