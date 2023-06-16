@@ -57,3 +57,40 @@ body {
 
 # position
 1. ```position:  absolute;```: 절대값으로 위치 (부모가 relative면 부모의 절대값)
+
+# HTML -> JS
+1. id로 가져오기
+```java script
+const navToggleDiv1 = document.getElementById("nav-toggle");
+const navToggleDiv2 = nav_toggle; // JS 변수 규칙을 지켜야 함: 언더바로 공백 표시
+```
+2. class로 가져오기
+```java script
+const navToggleDiv = document.getElementsByClassName("nav-toggle")[0];
+```
+3. tag로 가져오기
+```java script
+const navToggleDiv = document.getElementsByTagName("div")[0];
+```
+4. css 선택자로 가져오기
+```java script
+const navToggleDiv = document.querySelector("#nav_toggle");
+const navToggleDiv = document.querySelectorAll(".nav-toggle")[0];
+const navToggleDiv = document.querySelectorAll("div")[0];
+```
+5. 특정 요소 안에서 가져오기 -> document대신 요소로
+```java script
+const navToggleI = nav_toggle.getElementsByTagName("i")[0];
+```
+
+# event handling
+1. 클릭했을 때
+```java script
+nav_toggle.onclick = sayHello; 
+nav_toggle.onclick = () => {
+    alert("안녕");
+};
+nav_toggle.onclick = () => alert("안녕");
+```
+
+# clss class 추가하기
