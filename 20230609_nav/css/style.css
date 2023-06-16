@@ -115,5 +115,9 @@ nav {
     }
     /* .show-menu 하면, .nav-list 보이게 */
     /* .show-menu 하면, .nav-toggle 아래로 */
+
+    .show-menu{
+        height: 150px;
+    }
 }
 
