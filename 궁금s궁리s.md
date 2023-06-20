@@ -93,4 +93,19 @@ nav_toggle.onclick = () => {
 nav_toggle.onclick = () => alert("안녕");
 ```
 
-# clss class 추가하기
+# clss 제어
+1. ```classList.remove("클래스 이름")```: 클래스 제거
+2. ```classList.add("클래스 이름")```: 클래스 추가
+3. ```classList.toggle("클래스 이름")```: 클래스가 있다면 제거, 클래스가 없다면 추가
+
+# src
+1. ```<img src="images/img.jpg" alt="">```: 현재 폴더 안의 images의 img.jpg
+2. ```<img src="./images/img.jpg" alt="">```: 현재 폴더 안의 images의 img.jpg
+3. ```<img src="/images/img.jpg" alt="">```: 루트 폴더 안의 images의 img.jpg
+
+# array와 json
+1. array에서 index값으로 로 값 가져오기: ```array[index]```
+2. json에서 key값으로 value 가져오기: ```j.key``` or ```j['key']```
+
+# calc()
+1. ```margin-top: calc(44px + 150px);```: 기호와 값 사이에는 공백이 있어야 적용된다
