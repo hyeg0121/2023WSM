@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+/* import문은 맨 위에 있어야 함 */
+
+/* Variable CSS */
+:root {
+    /* color */
+    --first-color: #008156;
+    --second-color: rgb(239, 177, 28);
+    --body-color: black;
+
+    /* font */
+    --body-font: 'Nanum Myeongjo', serif;
+    --h1-font-size: 2rem;       /* 32px*/
+    --h2-font-size: 1.5rem;     /* 24px*/
+    --h3-font-size: 1.25rem;    /* 20px*/
+    --normal-font-size: 1rem; /* 16pxpx*/
+    --small-font-size: 0.8rem; /* 16pxpx*/
+    --font-regular: 400; /* 16pxpx*/
+    --font-bold: 700; /* 16pxpx*/
+    --font-extra-bold: 800; /* 16pxpx*/
+}
+/* -- 가 모두 변수 */
+
+body {
+    font-family: var(--body-font);
+    color: var(--body-color);
+}
+
+/* nav */
+header {
+    background-color: var(--first-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+nav {
+    height: 44px;
+}
+
+.nav.container {
+    display: flex;  /* 기본값: 수평 정렬 */
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF; /* css 속성은 상속된다 */
+    /* padding-left: 16px;
+    padding-right: 16px; */
+    padding: 0 16px; /* top, bottom => 0, left, right => 16px*/
+}
+
+.nav.container a {
+    color: #FFF; /* reset에서 모든 a를 black으로 함 -> .nav.container의 자손인 a만 #FFF*/
+}
+
+.nav-list {
+    display: flex; /* 기본값: 수평 정렬 */
+    column-gap: 80px;   /* item의 열 사이 공간 */
+    /* gap : 열과 행 사이 공간 모두 */
+    font-weight: var(--font-bold);
+}
+
+.nav-toggle {
+    font-size: var(--h2-font-size); /* 햄버거 메뉴의 크기 키우기 (시험문제) */ 
+    visibility: hidden; /* 햄버거 메뉴가 안보이게 */
+}
+
+@media screen and (max-width: 720px) {
+    
+}
+
+
+/* mobile */
+@media screen and (max-width: 540px) {
+    /* .nav-logo 가운데 */
+    .nav-logo {
+        margin: 0 auto; /* 수평 가운데 */
+    }
+    
+    /* .nav-list navbar 아래로 */
+    .nav-list{
+        position: absolute; /*절대값 (부모가 relative면 부모의 절대값)*/
+        top: 44px;  /* navbar 보다 아래로 */
+        flex-direction: column; /* 수직으로 */
+        right: 0;   /* list의 공간을 길게 차지,  */
+        left: 0;    /* 너비를 양 옆으로 늘리기 */
+        /* align-items: center;    교차축 가운데 -> 콘텐츠 너비만큼 줄이고 중앙 정렬함*/
+        text-align: center; /* 글자만 가운데로 */
+        background-color: rgba(239, 177, 28, 0.1);  /* 배경색 주기 */
+        backdrop-filter: blur(8px); /* blur 효과 */
+        height: 0;  /*  nav-list가 보이지 않게 */
+        overflow: hidden;   /* nav-list 안의 요소들이 보여지지 않게 */
+        transition: 0.5s;
+    }
+    
+    .nav-item{
+        padding: 1em 0; /* 세로 여백 */
+        border-bottom: 1px solid #FFF;
+    }
+
+    .nav-list a {
+        display: block;
+        color: var(--body-color);
+    }
+
+    .nav-link {
+        display: block;
+    }
+
+    /* .nav-toggle 보이게 */
+    .nav-toggle {
+        visibility: visible;
+        /* 절대값으로 만들어서 로고가 차지하는 영역에 영향 X */
+        position: absolute; /* 로고가 정가운데 위치하게끔 */
+        right: 16px;    /* 오른쪽으로 */
+    }
+    /* .show-menu 하면, .nav-list 보이게 */
+    /* .show-menu 하면, .nav-toggle 아래로 */
+
+    .show-menu{
+        height: 150px;
+    }
+}
+

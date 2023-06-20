@@ -1,0 +1,22 @@
+.bookshelf {
+    margin-top: calc(44px + 150px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px; /* row-gap: 20px; coulmn-gap: 20px */
+    justify-content: center;
+}
+
+.row-container {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 80px;
+}
+
+.book-item {
+    box-shadow: 0 16px 32px #ddd;
+}
+
+.book-item > img {
+    /* book-itme 바로 밑 img */
+    width: 150px;
+}
