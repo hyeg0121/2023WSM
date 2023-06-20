@@ -13,22 +13,31 @@ function sayHello(){
 // .nav-list -> navListUl
 const navToggleDiv = document.getElementById("nav_toggle");
 const navToggleI = nav_toggle.getElementsByTagName("i")[0];
-const navListUl = document.getElementsByClassName("nav-list");
+const navListUl = document.getElementsByClassName("nav-list")[0];
 
 // 2. Event Handling
-// 햄버거 메뉴 클릭하면, 햄버거 메뉴 i를 <-> x로 bi-x-lg
-// 햄버거 메뉴 클릭하면, .nav-list에 .show-menu 보여주기 <-> 안보여주기
+nav_toggle.onclick = () => {
+    //  toggle(): 있으면 빼고, 없으면 추가
+    // 햄버거 메뉴 클릭하면, 햄버거 메뉴 i를 <-> x로 bi-x-lg
+    navToggleI.classList.toggle("bi-list");
+    navToggleI.classList.toggle("bi-x-lg");
 
-nav_toggle.onclick = sayHello; // 호출 X, 정의만 해야 함
+    // 햄버거 메뉴 클릭하면, .nav-list에 .show-menu 보여주기 <-> 안보여주기
+    navListUl.classList.toggle("show-menu");
+    
+};
+
+// nav_toggle.onclick = sayHello; // 호출 X, 정의만 해야 함
 // alert 이 return 하는 값을 onclick 에 넣는 것
 // 시험 문제
 
-nav_toggle.onclick = () => {
-    alert("안녕");
-};
+// nav_toggle.onclick = () => {
+//     alert("안녕");
+// };
 
 // nav_toggle.onclick = alert("안녕"); // 시험문제 -> 바로 실행 O
-nav_toggle.onclick = () => alert("안녕"); // 시험문제 -> 바로 실행 X
+// nav_toggle.onclick = () => alert("안녕"); // 시험문제 -> 바로 실행 X
+
 
 //------------------------------
 // HTML -> JS

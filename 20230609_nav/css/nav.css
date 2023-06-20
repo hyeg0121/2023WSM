@@ -90,6 +90,7 @@ nav {
         backdrop-filter: blur(8px); /* blur 효과 */
         height: 0;  /*  nav-list가 보이지 않게 */
         overflow: hidden;   /* nav-list 안의 요소들이 보여지지 않게 */
+        transition: 0.5s;
     }
     
     .nav-item{
