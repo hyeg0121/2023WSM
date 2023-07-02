@@ -55,6 +55,11 @@ li:nth-child(5n) {
     background-color: aqua;
 }
 /* 다음에 합시다 */
-ul:nth-child(2) > li:nth-child(2) {
+
+ul:nth-child(3) > li:nth-child(2):hover {
     text-decoration: overline;
+}
+
+body > div:nth-child(8) > ol:nth-child(3) > li:nth-child(2) {
+    font-size: 34px;
 }
