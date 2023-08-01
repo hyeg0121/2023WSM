@@ -86,7 +86,7 @@ nav {
         left: 0;    /* 너비를 양 옆으로 늘리기 */
         /* align-items: center;    교차축 가운데 -> 콘텐츠 너비만큼 줄이고 중앙 정렬함*/
         text-align: center; /* 글자만 가운데로 */
-        background-color: rgba(239, 177, 28, 0.1);  /* 배경색 주기 */
+        background-color: var(--first-color);  /* 배경색 주기 */
         backdrop-filter: blur(8px); /* blur 효과 */
         height: 0;  /*  nav-list가 보이지 않게 */
         overflow: hidden;   /* nav-list 안의 요소들이 보여지지 않게 */
