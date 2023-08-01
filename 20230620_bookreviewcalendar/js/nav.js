@@ -14,7 +14,6 @@ function sayHello(){
 const navToggleDiv = document.getElementById("nav_toggle");
 const navToggleI = nav_toggle.getElementsByTagName("i")[0];
 const navListUl = document.getElementsByClassName("nav-list")[0];
-
 // 2. Event Handling
 nav_toggle.onclick = () => {
     //  toggle(): 있으면 빼고, 없으면 추가
