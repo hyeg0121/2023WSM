@@ -17,9 +17,19 @@
 
 .book-item {
     box-shadow: 0 16px 32px #ddd;
+    transition: all 0.2s;
+}
+
+.book-item:hover {
+    /* 그림자  더 흐리게 */
+    box-shadow: 0 32px 64px #e0e0e0;
+    /* 위로 8px 이동함 */
+    transform: translateY(-8px);
 }
 
 .book-item > img {
     /* book-itme 바로 밑 img */
     width: 150px;
+    /* 이미지 밑에 살짝 생기는 여백 문제 해결 */
+    display: block;
 }
