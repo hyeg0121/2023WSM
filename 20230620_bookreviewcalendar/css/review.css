@@ -15,6 +15,13 @@ main {
 
 .book-image > img{
     display: block; /* 하얀 여백 날아감 */
+    border-radius: 5px;
+    box-shadow: 0 12px 32px #bbb;
+    transition: all 0.4s;
+}
+
+.book-image > img:hover {
+    transform: perspective(400px) rotateY(20deg);
 }
 
 .image-info-groups {
