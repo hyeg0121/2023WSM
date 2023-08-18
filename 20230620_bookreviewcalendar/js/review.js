@@ -47,6 +47,9 @@ console.log(title, author, publisher, bookImage);
 // HTML 요소 -> js 변수
 const titleDiv = document.getElementsByClassName('title')[1];
 titleDiv.innerHTML = title;
+// titleDiv에 title 속성에 값으로 title을 넣자
+// titleDiv.title = title;
+titleDiv.setAttribute('title', title);
 
 const authorDiv = document.getElementsByClassName('author')[1];
 authorDiv.innerHTML = author;
