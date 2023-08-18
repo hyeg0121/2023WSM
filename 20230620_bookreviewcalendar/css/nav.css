@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* import문은 맨 위에 있어야 함 */
 
 /* Variable CSS */
@@ -9,14 +9,14 @@
     --body-color: black;
 
     /* font */
-    --body-font: 'Nanum Myeongjo', serif;
+    --body-font: 'Noto Sans KR', sans-serif;
     --h1-font-size: 2rem;       /* 32px*/
     --h2-font-size: 1.5rem;     /* 24px*/
     --h3-font-size: 1.25rem;    /* 20px*/
     --normal-font-size: 1rem; /* 16pxpx*/
     --small-font-size: 0.8rem; /* 16pxpx*/
     --font-regular: 400; /* 16pxpx*/
-    --font-bold: 700; /* 16pxpx*/
+    --font-bold: 500; /* 16pxpx*/
     --font-extra-bold: 800; /* 16pxpx*/
 }
 /* -- 가 모두 변수 */
