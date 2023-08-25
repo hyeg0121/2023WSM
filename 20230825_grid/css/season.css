@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.8fr 1.2fr;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.item {
+    border: solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 {
+    background-color: lightcoral;
+}
+
+.item2 {
+    background-color: orangered;
+}
+
+.item3 {
+    background-color: burlywood;
+}
+
+.item4 {
+    background-color: lightskyblue;
+}
