@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
 }
 
 .item {
@@ -23,10 +27,88 @@
     color: #fff;
 }
 
-.item:nth-child(6n - 5) {
+/* .item:nth-child(6n + 7) {
+    background-color: #add384;
+} */
+
+.item:nth-child(7),
+.item:nth-child(13),
+.item:nth-child(18),
+.item:nth-child(23),
+.item:nth-child(26),
+.item:nth-child(32),
+.item:nth-child(37) {
     background-color: #add384;
 }
 
 .weekday:first-child {
-    background-color: #fff;
+    background-color: transparent;
 }
+
+/* .item:nth-child(10),
+.item:nth-child(17),
+.item:nth-child(20),
+.item:nth-child(21),
+.item:nth-child(22),
+.item:nth-child(24),
+.item:nth-child(26),
+.item:nth-child(27),
+.item:nth-child(28) {
+    background-color: #cceaba; 
+    grid-row: 2 / span 2;
+} */
+
+/* 1교시 코딩 */
+.item:nth-child(10) {
+    background-color: #cceaba; 
+    grid-row: 2 / span 2;
+    grid-column: 4 / span 1;
+    /* grid-area: 2 / 4 / span 2 / span 1; */
+}
+
+.item:nth-child(17) {
+    background-color: #cceaba; 
+    grid-column: -2 / -1;
+    grid-row: 3 / 5;
+    /* grid-row: 5 / 3 ; */
+    /* grid-row: 3 / span 2;
+    grid-row: span 2 / 3; 바뀌면 안된다 */ 
+    /* grid-area: 3 / 6 / span 2 / span 1; */
+}
+
+.item:nth-child(19) {
+    background-color: #cceaba; 
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 2;
+}
+
+.item:nth-child(20) {
+    background-color: #cceaba; 
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 2;
+}
+
+.item:nth-child(21) {
+    background-color: #cceaba; 
+    grid-column: 4 / span 1;
+    grid-row: 4 / span 2;
+}
+
+.item:nth-child(31) {
+    background-color: #cceaba; 
+    grid-column: 6 / span 1;
+    grid-row: 6 / span 2;
+}
+
+.item:nth-child(35) {
+    grid-column: 4 / span 1;
+    grid-row: 7 / span 2;
+}
+
+.item:nth-child(36) {
+    grid-column: 5 / span 1;
+    grid-row: 7 / span 2;
+}
+
+
+
