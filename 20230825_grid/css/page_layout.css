@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px 4fr 1fr;
+    grid-template-rows: 44px 1fr 80px;
+    grid-template-areas: 
+        "header     header  header" 
+        "side2      main    side_left" 
+        "footer     main    side_left"
+    ;
+}
+
+.container * {
+    border: solid 1px burlywood;
+}
+
+.header {
+    grid-area: header;
+    background-color: blanchedalmond;
+}
+
+.side1 {
+    grid-area: side_left;
+    background-color: bisque;
+}
+
+.main {
+    grid-area: main;
+    background-color: cornsilk;
+}
+
+.side2 {
+    grid-area: side2;
+    background-color: bisque;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: blanchedalmond;
+}
+
+figure > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
