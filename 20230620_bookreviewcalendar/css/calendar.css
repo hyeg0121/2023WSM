@@ -49,6 +49,10 @@ main {
     place-items: center;
 }
 
+.date.item:nth-child(1) {
+    grid-column: 6 / 7;
+}
+
 .review.flex-container {
     display: flex;
     flex-direction: column;
