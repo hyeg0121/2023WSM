@@ -53,6 +53,14 @@ main {
     grid-column: 6 / 7;
 }
 
+.date.item:nth-child(7n+2) {
+    color: blue;
+}
+
+.date.item:nth-child(7n+3) {
+    color: red;
+}
+
 .review.flex-container {
     display: flex;
     flex-direction: column;
