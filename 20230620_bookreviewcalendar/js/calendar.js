@@ -22,14 +22,14 @@ const setCalendar = (year, month) => {
     var thisMonthFirstDay = new Date(year, month - 1, 1).getDay();
     console.log('lastdate :', thisMonthLastDate, 'firstday :', thisMonthFirstDay);
 
-    const datesDiv = document.getElementsByClassName('dates')[0];
+    const datedContainerDiv = document.getElementsByClassName('dates')[0];
 
     for (let date = 1; date <= thisMonthLastDate; date++) {
         let dateItemDiv = document.createElement('div');
         dateItemDiv.classList.add('date');
         dateItemDiv.classList.add('item');
         dateItemDiv.innerHTML = date;
-        datesDiv.append(dateItemDiv);
+        datedContainerDiv.append(dateItemDiv);
     }
     
 };
