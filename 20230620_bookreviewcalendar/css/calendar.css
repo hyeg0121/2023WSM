@@ -19,6 +19,12 @@ main {
     margin-bottom: 40px;
 }
 
+/* 마우스 모양 손으로 바꾸기 */
+.left,
+.right {
+    cursor: pointer;
+}
+
 .weekday.container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -48,7 +54,7 @@ main {
     display: grid;
     place-items: center;
 }
-
+/* 
 .date.item:nth-child(1) {
     grid-column: 6 / 7;
 }
@@ -59,7 +65,7 @@ main {
 
 .date.item:nth-child(7n+3) {
     color: red;
-}
+} */
 
 .review.flex-container {
     display: flex;

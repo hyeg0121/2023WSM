@@ -65,6 +65,7 @@ nav {
 .nav-toggle {
     font-size: var(--h2-font-size); /* 햄버거 메뉴의 크기 키우기 (시험문제) */ 
     visibility: hidden; /* 햄버거 메뉴가 안보이게 */
+    cursor: pointer;
 }
 
 @media screen and (max-width: 720px) {
