@@ -13,7 +13,6 @@ leftDiv.onclick = () => {
     let prevMonth = new Date(year, month - 1);
     year = prevMonth.getFullYear();
     month = prevMonth.getMonth() + 1;
-    datesContainerDiv.innerHTML = '';
     setCalendar(year, month);
 };
 
@@ -25,7 +24,6 @@ rightDiv.onclick = () => {
         year++;
         month = 1;
     }
-    datesContainerDiv.innerHTML = '';
     setCalendar(year, month);
 };
 
@@ -33,6 +31,13 @@ rightDiv.onclick = () => {
 const setCalendar = (year, month) => {
     // 현재 월 제목에 표시
     monthDiv.innerHTML = `${month}월`;
+
+    // 자식을 clear
+    // datesContainerDiv.innerHTML = '';
+    // while (datesContainerDiv.firstChild !== undefined) {
+    //     datesContainerDiv.removeChild(datesContainerDiv.firstChild);
+    // }
+    datesContainerDiv.replaceChildren();
     
     // 해당 월의 마지막 날짜
     var thisMonthLastDate = new Date(year, month, 0).getDate();
@@ -53,15 +58,21 @@ const setCalendar = (year, month) => {
     firstDateDiv.style.gridColumnStart = firstDateDay + 1;
     
     // 토요일: 파란색 글자로
-    let saturdayFirstDate = Math.abs(7 - firstDateDay);
+    //  let saturdayFirstDate = Math.abs(7 - firstDateDay);
+    let saturdayFirstDate =  7 - firstDateDay;
+    //  let saturdayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n + ${saturdayFirstDate})`);
     let saturdayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n + ${saturdayFirstDate})`);
     for (let saturdayDiv of saturdayDivs) {
         saturdayDiv.style.color = 'blue';
     }
 
-    // 일요일: 빨간색 글자로
-    let sundayFirstDate = Math.abs(7 - firstDateDay);
+    // 일요일: 빨간색 글자로 
+    // TODO: 일요일이 1일일 때에 색이 안바뀌는거 해결하기 
+    // let sundayFirstDate = 6 + firstDateDay;
+    let sundayFirstDate = (8 -  firstDateDay) % 7;
     let sundayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n + ${sundayFirstDate})`);
+    // 일요일이 1일이면 -> sundayFirstDay = 0, 7n - 6 = 1, 2, 3, 4
+    // 일요일이 3일이면 -> sundayFirstDay = 5, 7n - 11 = -4, 3, ...
     for (let sundayDiv of sundayDivs) {
         sundayDiv.style.color = 'red';
     }
